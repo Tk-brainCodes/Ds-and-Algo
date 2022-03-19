@@ -20,5 +20,6 @@ function containsDuplicate2(nums) {
       }
       map[nums[i]] = i
   }
+  return false;
 }
 console.log(containsDuplicate2([1, 2, 3, 1]))
