@@ -16,8 +16,8 @@ class HashTable {
       this.data[address] = [];
       this.data[address].push([key, value]);
     }
-    this.data[address].push([key, value]);
-    return this.data;
+    this.data[address].push(key, value);
+    return this;
   }
 
   get(key) {
@@ -37,9 +37,9 @@ class HashTable {
   keys() {
     const keysArray = [];
     for (let i = 0; i < this.data.length; i++) {
-        if(this.data[i]){
-            keysArray.push(this.data[i][0][0])
-        }
+      if (this.data[i]) {
+        keysArray.push(this.data[i][0][0]);
+      }
     }
     return keysArray;
   }
