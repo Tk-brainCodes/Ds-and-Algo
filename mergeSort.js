@@ -1,20 +1,6 @@
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
 
-// function mergeSort(array) {
-//   //base case
-//   if (array.length <= 1) {
-//     return array;
-//   }
-
-//   return mergeSort(merge(left), merge(right));
-
-//   function merge(left, right) {}
-// }
-
-// const answer = mergeSort(numbers);
-// console.log(answer);
-
-//merge helper function
+//merge helper function (merge two sorted array)
 function merge(left, right) {
   let sortedArray = [];
 
@@ -37,8 +23,6 @@ function mergeSort2(array) {
   let left = mergeSort2(array.slice(0, mid));
   //get second half recursively
   let right = mergeSort2(array.slice(mid));
-
-  console.log("pos:", left, right);
 
   return merge(left, right);
 }
